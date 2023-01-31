@@ -1,7 +1,18 @@
 import Certificate from "./Certificate"
+import { useState, useEffect } from "react";
 
 export default function Certificates() {
-    const certificates = [
+
+    const [certificates, setCertificates] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/?collection=certificates")
+            .then((res) => res.json())
+            .then((data) => setCertificates(data.documents));
+
+    }, []);
+
+    const certificat = [
         {
             "name": "Bitcoin and CryptoCurrencies",
             "items": "University of California, Berkeley(eDX.org)",
@@ -29,7 +40,7 @@ export default function Certificates() {
             <p className='mt-1 text-md'>Here are some of the certifications and courses I have done.</p>
 
             <div className='flex flex-col md:flex-row gap-8 mt-4'>
-                {certificates.map(certificate => <Certificate certificate={certificate} />)}
+                {certificates.map(certificate => <Certificate key={certificate.name} certificate={certificate} />)}
 
             </div>
 

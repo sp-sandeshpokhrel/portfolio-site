@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <section id='home' className='min-h-screen text-center mt-4 flex flex-col justify-center '>
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 relative overflow-hidden md:h-96 md:w-96 mb-2">
-                <img src='/avatar.png' layout="fill" objectFit="cover" />
+                <img src='/avatar.png' layout="fill" />
             </div>
             <h1 className='text-3xl md:text-5xl font-medium text-teal-500'>SANDESH POKHREL</h1>
             <h3 className='text-xl md:text-2xl'>Blockchain Developer</h3>

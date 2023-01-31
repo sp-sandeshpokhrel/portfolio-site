@@ -7,7 +7,14 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 
+
+
+
+
 function App() {
+
+
+
   return (
     <main className='bg-gray-300 px-8 md:px-20 lg:px-40'>
 
