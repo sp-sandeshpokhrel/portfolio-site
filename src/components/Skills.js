@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Skills() {
 
-    const [skills, setSkills] = useState([]);
+    const [skil, setSkills] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:8000/?collection=skills")
@@ -14,7 +14,7 @@ export default function Skills() {
     }, []);
 
 
-    const skil = [
+    const skills = [
         {
             "name": "Programming",
             "items": ["C, C++", "Solidity", "Python, Javascript"]

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Projects() {
-    const [projects, setProjects] = useState([]);
+    const [projec, setProjects] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:8000/?collection=projects")
@@ -13,7 +13,7 @@ export default function Projects() {
     }, []);
 
 
-    const projec = [
+    const projects = [
         {
             "name": "E-Commerce Website",
             "items": ["Built backend of E-commerce website", "Coded using Django framework"]

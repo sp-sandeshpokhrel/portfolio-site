@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Certificates() {
 
-    const [certificates, setCertificates] = useState([]);
+    const [certificat, setCertificates] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:8000/?collection=certificates")
@@ -12,7 +12,7 @@ export default function Certificates() {
 
     }, []);
 
-    const certificat = [
+    const certificates = [
         {
             "name": "Bitcoin and CryptoCurrencies",
             "items": "University of California, Berkeley(eDX.org)",
